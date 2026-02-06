@@ -1,0 +1,67 @@
+@startuml
+title Research and Collaboration System - Use Case Diagram
+
+left to right direction
+
+actor Researcher
+actor Collaborator
+actor Reviewer
+actor Visitor
+actor Admin
+
+rectangle "Research and Collaboration System" {
+
+    (Register / Login) as UC1
+    (Create Research Project) as UC2
+    (Upload Research Paper) as UC3
+    (View Research Papers) as UC4
+    (Search Research Topics) as UC5
+    (Collaborate with Others) as UC6
+    (Share Files / Documents) as UC7
+    (Edit / Update Research) as UC8
+    
+    (Join Project) as UC9
+    (Upload Contribution) as UC10
+    (Communicate with Researcher) as UC11
+    
+    (Review Papers) as UC12
+    (Provide Feedback) as UC13
+    (Approve / Reject Paper) as UC14
+    
+    (Browse Research Papers) as UC15
+    
+    (Manage Users) as UC16
+    (Manage Research Projects) as UC17
+    (Monitor System) as UC18
+    (Approve / Remove Content) as UC19
+}
+
+Researcher --> UC1
+Researcher --> UC2
+Researcher --> UC3
+Researcher --> UC4
+Researcher --> UC5
+Researcher --> UC6
+Researcher --> UC7
+Researcher --> UC8
+
+Collaborator --> UC1
+Collaborator --> UC9
+Collaborator --> UC10
+Collaborator --> UC11
+Collaborator --> UC4
+
+Reviewer --> UC1
+Reviewer --> UC12
+Reviewer --> UC13
+Reviewer --> UC14
+
+Visitor --> UC15
+Visitor --> UC5
+
+Admin --> UC16
+Admin --> UC17
+Admin --> UC18
+Admin --> UC19
+
+@enduml
